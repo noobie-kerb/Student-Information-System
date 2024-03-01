@@ -10,7 +10,6 @@ import os
 root = Tk()
 root.geometry("1750x600")
 root.title("Student Information System")
-root.iconbitmap("D:/SSIS/student.ico")
 
 #student table(table to display student info)
 student_table = ttk.Treeview(root , columns = ("column1", "column2", "column3", "column4", "column5", "column6"), show = "headings", selectmode = "browse")
@@ -21,8 +20,8 @@ student_table.column("column3", width=100)
 course_table = ttk.Treeview(root, columns = "column1", show = "headings")
 
 #CSV file
-my_csv = "D:/SSIS/student.csv"
-course_code_csv = "D:/SSIS/course_code.csv"
+my_csv = "D:/student.csv"
+course_code_csv = "D:/course_code.csv"
 try:
     with open(my_csv, 'r', newline='') as file:
         reader = csv.reader(file)
